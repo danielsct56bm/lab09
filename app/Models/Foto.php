@@ -9,7 +9,10 @@ class Foto extends Model
 {
     use HasFactory;
 
-    public function users{
+    public function Users(){
         return $this->belongsTo(User::class);
+    }
+    public function Comentarios(){
+        return $this->hasMany(Comentario::class);
     }
 }
